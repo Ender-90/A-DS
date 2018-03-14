@@ -35,5 +35,5 @@ int topEle(stack_element * top){
 }
 
 bool isEmpty(stack_element * top){
-    return top;
+    return !top;
 }
