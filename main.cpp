@@ -20,10 +20,13 @@ int main(){
     testQuery->last = 0;
     queryAdd(testQuery, 1);
     queryAdd(testQuery, 3);
+    int take;
 
-    cout<<queryGet(testQuery)<<"\n";
-    cout<<queryGet(testQuery)<<"\n";
-    cout<<queryGet(testQuery);
+    queryGet(testQuery, take);
+    cout<<take<<"\n";
+    queryGet(testQuery, take);
+    cout<<take<<"\n";
+    cout<<queryGet(testQuery, take);
 
     return 0;
 }

@@ -1,5 +1,4 @@
 #include "queryImplementation.hpp"
-#include <iostream>
 
 // Query operations
 
@@ -20,22 +19,21 @@ void queryAdd(queryContainer * &activeQuery, int x){
     }
 }
 
-int queryGet(queryContainer * &activeQuery){
+bool queryGet(queryContainer * &activeQuery, int & result){
 
     if(!queryIsEmpty(activeQuery)){
 
-        int result = activeQuery->first->data;
+        result = activeQuery->first->data;
         queryElement * tmp = activeQuery->first;
         activeQuery->first = activeQuery->first->next;
 
         delete tmp;
         tmp = 0;
 
-        return result;
+        return true;
     } else {
 
-        std::cout<<"\n"<<"Query is empty! ";
-        return 0;
+        return false;
     }
 }
 

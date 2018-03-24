@@ -19,5 +19,5 @@ struct queryContainer {
 
 
 void queryAdd(queryContainer * &activeQuery, int x);
-int queryGet(queryContainer * &activeQuery);
+bool queryGet(queryContainer * &activeQuery, int & result);
 bool queryIsEmpty(queryContainer *activeQuery);
